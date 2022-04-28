@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name="Dish")
-@Table(name="dish")
+@Entity(name = "Dish")
+@Table(name = "dish")
 @Data
 public class Dish {
 
@@ -27,7 +27,7 @@ public class Dish {
 
     private List<Review> reviews = new ArrayList<>();
 
-    public Dish addReview(Review review){
+    public Dish addReview(Review review) {
         this.reviews.add(review);
         return this;
     }
