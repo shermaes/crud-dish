@@ -14,6 +14,6 @@ public class Review {
 
     private String message;
 
-    private Long FK_review_id;
+    private Long fkDishId;
 
 }

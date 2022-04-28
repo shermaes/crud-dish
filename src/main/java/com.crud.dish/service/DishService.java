@@ -1,4 +1,4 @@
-package service;
+package com.crud.dish.service;
 
 import com.crud.dish.entity.Dish;
 import com.crud.dish.entity.Review;

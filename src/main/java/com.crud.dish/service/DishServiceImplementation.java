@@ -1,13 +1,15 @@
-package service;
+package com.crud.dish.service;
 
 import com.crud.dish.entity.Dish;
 import com.crud.dish.entity.Review;
 import com.crud.dish.repository.DishRepository;
 import com.crud.dish.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DishServiceImplementation implements DishService {
 
     @Autowired
@@ -24,7 +26,7 @@ public class DishServiceImplementation implements DishService {
 
     @Override
     public Dish createReview(Review review) {
-        Dish dish = dishRepository.findById(review.getFK_review_id()).get();
+        Dish dish = dishRepository.findById(review.getFkDishId()).get();
         dish.addReview(review);
         reviewRepository.save(review);
         return dishRepository.save(dish);
